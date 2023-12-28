@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Your Page Title</title>
+    <meta name="description" content="Brief description of your page">
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/page-url">
+    <meta property="og:title" content="Your Content Title">
+    <meta property="og:description" content="Description of your page">
+    <meta property="og:image" content="https://yourwebsite.com/path/to/your-image.jpg">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://yourwebsite.com/page-url">
+    <meta name="twitter:title" content="Your Content Title">
+    <meta name="twitter:description" content="Description of your page">
+    <meta name="twitter:image" content="https://yourwebsite.com/path/to/your-image.jpg">
+
     <style>
         body, html {
             margin: 0;
@@ -21,13 +38,14 @@
             border: none;
         }
 
-        .hBW7Hb {
+        /* Custom CSS rules */
+        .oWHwWc, .NMm5M, .QMuaBc, .lego-reporting-view, .embedding-page-navigation .pageInfo,
+        .lego-reporting-view .embedding-footer-bg, .lego-reporting-view .embedding-footer .branding-info .app-name {
+            display: none !important;
+        }
 
-visibility: hidden;
-}
-        /* Your custom CSS rules */
-        .oWHwWc, .layout-row, .lego-reporting-view, .embedding-page-navigation, .pageInfo,
-        .lego-reporting-view .embedding-footer-bg, .lego-reporting-view .embedding-footer .branding-info .app-name, .lego-reporting-view:hover .embedding-footer-bg {
+        /* Additional CSS to hide specific elements */
+        div[_ngcontent-ng-c2669038004] {
             display: none !important;
         }
     </style>
