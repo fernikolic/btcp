@@ -1,3 +1,6 @@
+# Generating the complete HTML file with the full-page banner for mobile users
+
+html_content_with_banner = """
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,7 +24,6 @@
   <meta name="twitter:image" content="https://opengraph.b-cdn.net/production/documents/bfe08e27-8ded-4c96-9b05-80251263b7e0.png?token=iAesceNXlzfSoYX3hH4Y2NQfZMNteeJAiJUP9HhTEuE&height=1080&width=1080&expires=33239767483">
 
   <style>
-    /* Existing CSS */
     body, html {
         margin: 0;
         padding: 0;
@@ -47,13 +49,28 @@
     .lego-reporting-view .embedding-footer-bg, .lego-reporting-view .embedding-footer .branding-info .app-name {
         display: none !important;
     }
+
+    /* Full-page banner styling */
+    .mobile-banner {
+        display: none; /* Hidden by default */
+        position: fixed; /* Fixed position */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.8); /* Semi-transparent black background */
+        color: white;
+        text-align: center;
+        padding-top: 20%; /* Adjust as needed */
+        z-index: 1000; /* Ensure it's above other elements */
+    }
   </style>
 
   <script>
-    // JavaScript for displaying a pop-up on mobile devices
+    // JavaScript for displaying a full-page banner on mobile devices
     window.onload = function() {
         if (window.innerWidth <= 768) {
-            alert("This site is best viewed on a desktop for the optimal experience.");
+            document.getElementById('mobileBanner').style.display = 'block';
         }
     };
   </script>
@@ -62,6 +79,19 @@
   <div class="responsive-iframe-container">
       <iframe src="https://lookerstudio.google.com/embed/reporting/3b5f6eb6-2d05-4b38-88a1-6e3e6c96d1f2/page/p_7hx94sw1cd" frameborder="0" style="border:0" allowfullscreen></iframe>
   </div>
+
+  <!-- Full-page banner for mobile users -->
+  <div id="mobileBanner" class="mobile-banner">
+      <p>This site is best viewed on a desktop.</p>
+      <button onclick="document.getElementById('mobileBanner').style.display='none'">Close</button>
+  </div>
 </body>
 </html>
+"""
 
+# Save the updated HTML content to a file
+updated_file_path = '/mnt/data/Bitcoin_Perception_Data_HTML_with_Banner.html'
+with open(updated_file_path, 'w') as file:
+    file.write(html_content_with_banner)
+
+updated_file
