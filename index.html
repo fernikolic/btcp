@@ -20,40 +20,48 @@
   <meta name="twitter:description" content="Industry-leading research, data, and analytics tools.">
   <meta name="twitter:image" content="https://opengraph.b-cdn.net/production/documents/bfe08e27-8ded-4c96-9b05-80251263b7e0.png?token=iAesceNXlzfSoYX3hH4Y2NQfZMNteeJAiJUP9HhTEuE&height=1080&width=1080&expires=33239767483">
 
-    
-<style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden; /* Hide overflow */
-            background-color: black; /* Set background color to black */
-        }
-        .responsive-iframe-container {
-            position: relative;
-            height: calc(100vh - 25px); /* Slightly reduce cropping */
-            width: 100vw;
-            overflow: hidden; /* Hide the overflow */
-        }
-        .responsive-iframe-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: calc(100% + 20px); /* Adjust height to match container */
-            border: none;
-        }
+  <style>
+    /* Existing CSS */
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+        background-color: black;
+    }
+    .responsive-iframe-container {
+        position: relative;
+        height: calc(100vh - 25px);
+        width: 100vw;
+        overflow: hidden;
+    }
+    .responsive-iframe-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% + 20px);
+        border: none;
+    }
+    .oWHwWc, .NMm5M, .QMuaBc, .lego-reporting-view, .embedding-page-navigation .pageInfo,
+    .lego-reporting-view .embedding-footer-bg, .lego-reporting-view .embedding-footer .branding-info .app-name {
+        display: none !important;
+    }
+  </style>
 
-        /* Custom CSS rules */
-        .oWHwWc, .NMm5M, .QMuaBc, .lego-reporting-view, .embedding-page-navigation .pageInfo,
-        .lego-reporting-view .embedding-footer-bg, .lego-reporting-view .embedding-footer .branding-info .app-name {
-            display: none !important;
+  <script>
+    // JavaScript for displaying a pop-up on mobile devices
+    window.onload = function() {
+        if (window.innerWidth <= 768) {
+            alert("This site is best viewed on a desktop for the optimal experience.");
         }
-    </style>
+    };
+  </script>
 </head>
 <body>
-    <div class="responsive-iframe-container">
-        <iframe src="https://lookerstudio.google.com/embed/reporting/3b5f6eb6-2d05-4b38-88a1-6e3e6c96d1f2/page/p_7hx94sw1cd" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </div>
+  <div class="responsive-iframe-container">
+      <iframe src="https://lookerstudio.google.com/embed/reporting/3b5f6eb6-2d05-4b38-88a1-6e3e6c96d1f2/page/p_7hx94sw1cd" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
 </body>
 </html>
+
